@@ -11,20 +11,20 @@ This application uses Springboot,Spring-web,Spring-kafka teamplate, jackson-data
 
 # Steps
 
-* First we need to start Zookeeper server , go inside the downloaded kafka directory and then use the below command.
+# * First we need to start Zookeeper server , go inside the downloaded kafka directory and then use the below command.
 
 --> bin/zookeeper-server-start.sh config/zookeeper.properties
 
-* Start kafka server
+# * Start kafka server
 --> bin/kafka-server-start.sh config/server.properties
 
-* Create a kafka topic
+# * Create a kafka topic
 -->bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic events-rest
 
-* Publish message using GET request 
+# * Publish message using GET request 
 --> http://localhost:8080/publish  (You will see the meesage 'Published message successfully' for this get request)
 
-* To see the published meesage from terminal use the below console consumer command.
+# * To see the published meesage from terminal use the below console consumer command.
 --> bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic events-rest --from-beginning
 
 
