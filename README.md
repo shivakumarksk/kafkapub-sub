@@ -27,6 +27,8 @@ This application uses Springboot,Spring-web,Spring-kafka teamplate, jackson-data
 # * To see the published meesage from terminal use the below console consumer command.
 --> bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic events-rest --from-beginning
 
+# Note : You can ignore the /service/Sendmsg and model/user classes from the src directory.
+
 
 
 
